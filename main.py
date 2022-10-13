@@ -1,7 +1,12 @@
 # On définit la question en tant que variable s,appelant "phrase"
 phrase = input("Écrivez une phrase")
-# On définit le nombre de mots comme variable. Ensuite on utilise la fonction "len" pour compter le nombre de mots,
-# et la fonction "split" pour s'assurer que les espaces ne sont pas tenus en compte pour le nombre de mots.
-count_word = len(phrase.split(" "))
-# On print le nombre de mots
-print("le nombre de mots est:", count_word)
+# on définit "count_word" comme une fonction qui exécutera les actions du "string"
+def count_word(string):
+# On crée "nombre" comme une fonction qui compte le nombre de mots et qui ne compte pas les espaces comme un mot
+    nombre = len(phrase.split(" "))
+# ON demande au programme de retourner le nombre de mots
+    return nombre
+# On crée une variable qui appelle la fonction count_word et la variable phrase pour crée une réponse pour le nombre de mots
+resultat = count_word(phrase)
+# On print le nombre de mots en appelant la variable de la ligne précédente
+print("le nombre de mots est:", resultat)
